@@ -22,9 +22,9 @@ export default function Header() {
         </div>
         <h1 className="flex items-center justify-end flex-1">
           <ModeToggle />
-          <Link className="ml-2" href="/admin">
+          {/* <Link className="ml-2" href="/admin">
             Dashboard
-          </Link>
+          </Link> */}
         </h1>
       </div>
     </header>

@@ -31,6 +31,7 @@ export default function MobileNav() {
                 <Link href="/">Home</Link>
                 <Link href="/about">About</Link>
                 <Link href="/contact">Contact</Link>
+                <Link href="/admin">Dashboard</Link>
               </nav>
             </SheetContent>
           </SheetDescription>
