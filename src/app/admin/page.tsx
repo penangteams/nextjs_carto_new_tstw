@@ -7,6 +7,7 @@ import { nanoid } from "nanoid";
 import { ITypes } from "@/app/types/MyCard.types";
 import { TableUsers } from "@/app/components/TableUsers";
 import Link from "next/link";
+import { Player, Controls } from "@lottiefiles/react-lottie-player";
 
 const spadess = <>&spades;</>;
 const diamss = <>&diams;</>;
@@ -29,10 +30,22 @@ export default function AdminPage() {
   return (
     <>
       <div className="my-7">
+        {mpacks.length === 0 && (
+          <div className="flex justify-center items-center">
+            {" "}
+            <Player
+              autoplay
+              loop
+              src="https://lottie.host/dafb31b0-6115-4858-b9aa-1a4f69da3c11/2lOcFiCFQ7.json"
+              style={{
+                height: "300px",
+                width: "300px",
+              }}
+            ></Player>
+          </div>
+        )}
         <div className="grid grid-cols-2 gap-2 md:grid-cols-4 auto-cols-max">
-          {mpacks.length === 0 ? (
-            <div>No data</div>
-          ) : (
+          {mpacks &&
             mpacks.map((el, index) => {
               return (
                 <div
@@ -161,8 +174,8 @@ export default function AdminPage() {
                   )}
                 </div>
               );
-            })
-          )}
+            })}
+
           {mpacks && mpacks.length > 0 ? (
             <div className="top-0 flex flex-col items-center justify-center">
               <Link
@@ -173,7 +186,7 @@ export default function AdminPage() {
                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-purple-700 group-hover:bg-purple-500 group-hover:-skew-x-12"></span>
                 <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-purple-600 -rotate-12"></span>
                 <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-purple-400 -rotate-12"></span>
-                <span className="relative text-sm">Save this pack</span>
+                <span className="relative text-sm">Save pack</span>
               </Link>
               <Link
                 href="/"
@@ -183,7 +196,7 @@ export default function AdminPage() {
                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-pink-700 group-hover:bg-pink-500 group-hover:-skew-x-12"></span>
                 <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-pink-600 -rotate-12"></span>
                 <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-pink-400 -rotate-12"></span>
-                <span className="relative text-sm">Discard this pack</span>
+                <span className="relative text-sm">Discard pack</span>
               </Link>
               <Link
                 href="/"
