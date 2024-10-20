@@ -163,38 +163,40 @@ export default function AdminPage() {
               );
             })
           )}
-          <div className="top-0 flex flex-col items-center justify-center">
-            <Link
-              href="/"
-              className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%]"
-            >
-              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-purple-500 group-hover:bg-purple-700 group-hover:skew-x-12"></span>
-              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-purple-700 group-hover:bg-purple-500 group-hover:-skew-x-12"></span>
-              <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-purple-600 -rotate-12"></span>
-              <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-purple-400 -rotate-12"></span>
-              <span className="relative text-sm">Save this pack</span>
-            </Link>
-            <Link
-              href="/"
-              className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%]"
-            >
-              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-pink-500 group-hover:bg-pink-700 group-hover:skew-x-12"></span>
-              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-pink-700 group-hover:bg-pink-500 group-hover:-skew-x-12"></span>
-              <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-pink-600 -rotate-12"></span>
-              <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-pink-400 -rotate-12"></span>
-              <span className="relative text-sm">Discard this pack</span>
-            </Link>
-            <Link
-              href="/"
-              className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%]"
-            >
-              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-green-500 group-hover:bg-green-700 group-hover:skew-x-12"></span>
-              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-green-700 group-hover:bg-green-500 group-hover:-skew-x-12"></span>
-              <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-green-600 -rotate-12"></span>
-              <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-green-400 -rotate-12"></span>
-              <span className="relative text-sm">Edit notes</span>
-            </Link>
-          </div>
+          {mpacks && mpacks.length > 0 ? (
+            <div className="top-0 flex flex-col items-center justify-center">
+              <Link
+                href="/"
+                className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%] sm:w-full"
+              >
+                <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-purple-500 group-hover:bg-purple-700 group-hover:skew-x-12"></span>
+                <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-purple-700 group-hover:bg-purple-500 group-hover:-skew-x-12"></span>
+                <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-purple-600 -rotate-12"></span>
+                <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-purple-400 -rotate-12"></span>
+                <span className="relative text-sm">Save this pack</span>
+              </Link>
+              <Link
+                href="/"
+                className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%]"
+              >
+                <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-pink-500 group-hover:bg-pink-700 group-hover:skew-x-12"></span>
+                <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-pink-700 group-hover:bg-pink-500 group-hover:-skew-x-12"></span>
+                <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-pink-600 -rotate-12"></span>
+                <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-pink-400 -rotate-12"></span>
+                <span className="relative text-sm">Discard this pack</span>
+              </Link>
+              <Link
+                href="/"
+                className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%]"
+              >
+                <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-green-500 group-hover:bg-green-700 group-hover:skew-x-12"></span>
+                <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-green-700 group-hover:bg-green-500 group-hover:-skew-x-12"></span>
+                <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-green-600 -rotate-12"></span>
+                <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-green-400 -rotate-12"></span>
+                <span className="relative text-sm">Edit notes</span>
+              </Link>
+            </div>
+          ) : null}
         </div>
       </div>
 
