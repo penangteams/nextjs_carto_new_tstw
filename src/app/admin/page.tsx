@@ -7,7 +7,8 @@ import { nanoid } from "nanoid";
 import { ITypes } from "@/app/types/MyCard.types";
 import { TableUsers } from "@/app/components/TableUsers";
 import Link from "next/link";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import { Player } from "@lottiefiles/react-lottie-player";
+import { Suspense } from "react";
 
 const spadess = <>&spades;</>;
 const diamss = <>&diams;</>;
@@ -32,16 +33,17 @@ export default function AdminPage() {
       <div className="my-7">
         {mpacks.length === 0 && (
           <div className="flex justify-center items-center">
-            {" "}
-            <Player
-              autoplay
-              loop
-              src="https://lottie.host/dafb31b0-6115-4858-b9aa-1a4f69da3c11/2lOcFiCFQ7.json"
-              style={{
-                height: "300px",
-                width: "300px",
-              }}
-            ></Player>
+            <Suspense fallback={<>Loading...</>}>
+              <Player
+                autoplay
+                loop
+                src="https://lottie.host/dafb31b0-6115-4858-b9aa-1a4f69da3c11/2lOcFiCFQ7.json"
+                style={{
+                  height: "300px",
+                  width: "300px",
+                }}
+              ></Player>
+            </Suspense>
           </div>
         )}
         <div className="grid grid-cols-2 gap-2 md:grid-cols-4 auto-cols-max">
