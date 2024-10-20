@@ -52,3 +52,8 @@ to get SSL:
 sudo certbot -d nextjs.wintech.homes -d www.nextjs.wintech.homes
 A congrats message will come together with auto created: nextcarto-le-ssl.conf 
 
+Simple pagination shadcn ui:
+https://www.youtube.com/watch?v=x8dszJTm_RQ
+https://github.com/AndyUGA/shadcn-ui-react-app/tree/pagination
+
+=============================

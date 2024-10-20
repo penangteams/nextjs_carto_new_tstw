@@ -9,11 +9,23 @@ import {
   TableHeader,
   TableRow,
 } from "@/app/components/ui/table";
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/app/components/ui/pagination";
 import Link from "next/link";
 import { c_data } from "./clientdata";
 import { useSearchStore } from "@/contexts/store";
+import { useState } from "react";
 
 export const TableUsers = () => {
+  const rowsPerPage = 10;
+  const [startIndex, setStartIndex] = useState(0);
+  const [endIndex, setEndIndex] = useState(rowsPerPage);
+
   const search = useSearchStore((state) => state.searchTerm);
   const filteredList = c_data.filter(
     (item) =>
@@ -43,7 +55,7 @@ export const TableUsers = () => {
           {filteredList.length === 0 ? (
             <div>No data</div>
           ) : (
-            filteredList.map((el, index) => {
+            filteredList.slice(startIndex, endIndex).map((el, index) => {
               return (
                 <TableRow key={index}>
                   <TableCell className="font-medium">{el.username}</TableCell>
@@ -66,6 +78,35 @@ export const TableUsers = () => {
           )}
         </TableBody>
       </Table>
+      <Pagination>
+        <PaginationContent>
+          <PaginationItem>
+            <PaginationPrevious
+              size="sm"
+              className={
+                startIndex === 0 ? "pointer-events-none opacity-50" : undefined
+              }
+              onClick={() => {
+                setStartIndex(startIndex - rowsPerPage);
+                setEndIndex(endIndex - rowsPerPage);
+              }}
+            />
+          </PaginationItem>
+
+          <PaginationItem>
+            <PaginationNext
+              size="sm"
+              className={
+                endIndex === 100 ? "pointer-events-none opacity-50" : undefined
+              }
+              onClick={() => {
+                setStartIndex(startIndex + rowsPerPage); //10
+                setEndIndex(endIndex + rowsPerPage); //10 + 10 = 20
+              }}
+            />
+          </PaginationItem>
+        </PaginationContent>
+      </Pagination>
     </>
   );
 };

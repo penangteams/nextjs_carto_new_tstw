@@ -167,7 +167,7 @@ export default function AdminPage() {
             <div className="top-0 flex flex-col items-center justify-center">
               <Link
                 href="/"
-                className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%] sm:w-full"
+                className="relative px-5 py-2 font-medium text-white group my-1 text-center md:w-[60%] sm:w-3/4 xs:w-full"
               >
                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-purple-500 group-hover:bg-purple-700 group-hover:skew-x-12"></span>
                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-purple-700 group-hover:bg-purple-500 group-hover:-skew-x-12"></span>
@@ -177,7 +177,7 @@ export default function AdminPage() {
               </Link>
               <Link
                 href="/"
-                className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%]"
+                className="relative px-5 py-2 font-medium text-white group my-1 text-center md:w-[60%] sm:w-3/4 xs:w-full"
               >
                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-pink-500 group-hover:bg-pink-700 group-hover:skew-x-12"></span>
                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-pink-700 group-hover:bg-pink-500 group-hover:-skew-x-12"></span>
@@ -187,7 +187,7 @@ export default function AdminPage() {
               </Link>
               <Link
                 href="/"
-                className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%]"
+                className="relative px-5 py-2 font-medium text-white group my-1 text-center md:w-[60%] sm:w-3/4 xs:w-full"
               >
                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-green-500 group-hover:bg-green-700 group-hover:skew-x-12"></span>
                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-green-700 group-hover:bg-green-500 group-hover:-skew-x-12"></span>
