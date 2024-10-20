@@ -6,6 +6,7 @@ import styles from "@/app/components/MyCard.module.css";
 import { nanoid } from "nanoid";
 import { ITypes } from "@/app/types/MyCard.types";
 import { TableUsers } from "@/app/components/TableUsers";
+import Link from "next/link";
 
 const spadess = <>&spades;</>;
 const diamss = <>&diams;</>;
@@ -48,17 +49,24 @@ export default function AdminPage() {
                           <span className={styles.suit}>{heartss}</span>
                         </div>
                       </span>
-                      <p className="text-sm text-justify border-2 border-green-600 px-2 rounded-lg">
-                        Actually brunch messenger bag, you probably havent heard
-                        of them cliche pinterest truffaut enamel pin
-                        chicharrones schlitz. Slow-carb hell of cardigan
-                        church-key pug skateboard. PBR&B artisan affogato,
-                        locavore cupping blue bottle keffiyeh poutine XOXO
-                        organic. Health goth gluten-free mumblecore
-                        farm-to-table, copper mug flexitarian pour-over grailed
-                        PBR&B aesthetic raw denim umami heirloom forage. Selfies
-                        thundercats kickstarter venmo edison bulb post-ironic.
-                      </p>
+                      <div className="text-sm text-justify border-2 border-green-600 px-2 rounded-lg mt-4">
+                        <ul>
+                          <li>
+                            The ace of diamond is a very lucky card and it shows
+                            the money strength of the client
+                          </li>
+                          <li>
+                            The jack of heart is a rmantic man, a day dreamer.
+                            Money is secondary before love, it shows new love,
+                            new network etc
+                          </li>
+                          <li>
+                            The Queen of hearts is the lovely mother, wife,
+                            girl-friend, signifies that wealth is on the way,
+                            new beginnings
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   )}
                   {el?.name?.includes("spade") && (
@@ -71,17 +79,24 @@ export default function AdminPage() {
                           <span className={styles.suit}>{spadess}</span>
                         </div>
                       </span>
-                      <p className="text-sm text-justify border-2 border-pink-400 px-2 rounded-lg">
-                        Actually brunch messenger bag, you probably havent heard
-                        of them cliche pinterest truffaut enamel pin
-                        chicharrones schlitz. Slow-carb hell of cardigan
-                        church-key pug skateboard. PBR&B artisan affogato,
-                        locavore cupping blue bottle keffiyeh poutine XOXO
-                        organic. Health goth gluten-free mumblecore
-                        farm-to-table, copper mug flexitarian pour-over grailed
-                        PBR&B aesthetic raw denim umami heirloom forage. Selfies
-                        thundercats kickstarter venmo edison bulb post-ironic.
-                      </p>
+                      <div className="text-sm text-justify border-2 border-green-600 px-2 rounded-lg mt-4">
+                        <ul>
+                          <li>
+                            The ace of diamond is a very lucky card and it shows
+                            the money strength of the client
+                          </li>
+                          <li>
+                            The jack of heart is a rmantic man, a day dreamer.
+                            Money is secondary before love, it shows new love,
+                            new network etc
+                          </li>
+                          <li>
+                            The Queen of hearts is the lovely mother, wife,
+                            girl-friend, signifies that wealth is on the way,
+                            new beginnings
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   )}
                   {el?.name?.includes("diamond") && (
@@ -94,17 +109,24 @@ export default function AdminPage() {
                           <span className={styles.suit}>{diamss}</span>
                         </div>
                       </span>
-                      <p className="text-sm text-justify border-2 border-orange-300 px-2 rounded-lg">
-                        Actually brunch messenger bag, you probably havent heard
-                        of them cliche pinterest truffaut enamel pin
-                        chicharrones schlitz. Slow-carb hell of cardigan
-                        church-key pug skateboard. PBR&B artisan affogato,
-                        locavore cupping blue bottle keffiyeh poutine XOXO
-                        organic. Health goth gluten-free mumblecore
-                        farm-to-table, copper mug flexitarian pour-over grailed
-                        PBR&B aesthetic raw denim umami heirloom forage. Selfies
-                        thundercats kickstarter venmo edison bulb post-ironic.
-                      </p>
+                      <div className="text-sm text-justify border-2 border-green-600 px-2 rounded-lg mt-4">
+                        <ul>
+                          <li>
+                            The ace of diamond is a very lucky card and it shows
+                            the money strength of the client
+                          </li>
+                          <li>
+                            The jack of heart is a rmantic man, a day dreamer.
+                            Money is secondary before love, it shows new love,
+                            new network etc
+                          </li>
+                          <li>
+                            The Queen of hearts is the lovely mother, wife,
+                            girl-friend, signifies that wealth is on the way,
+                            new beginnings
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   )}
                   {el?.name?.includes("clubs") && (
@@ -117,28 +139,68 @@ export default function AdminPage() {
                           <span className={styles.suit}>{clubss}</span>
                         </div>
                       </span>
-                      <p className="text-sm text-justify border-2 border-purple-400 px-2 rounded-lg">
-                        Actually brunch messenger bag, you probably havent heard
-                        of them cliche pinterest truffaut enamel pin
-                        chicharrones schlitz. Slow-carb hell of cardigan
-                        church-key pug skateboard. PBR&B artisan affogato,
-                        locavore cupping blue bottle keffiyeh poutine XOXO
-                        organic. Health goth gluten-free mumblecore
-                        farm-to-table, copper mug flexitarian pour-over grailed
-                        PBR&B aesthetic raw denim umami heirloom forage. Selfies
-                        thundercats kickstarter venmo edison bulb post-ironic.
-                      </p>
+                      <div className="text-sm text-justify border-2 border-green-600 px-2 rounded-lg mt-4">
+                        <ul>
+                          <li>
+                            The ace of diamond is a very lucky card and it shows
+                            the money strength of the client
+                          </li>
+                          <li>
+                            The jack of heart is a rmantic man, a day dreamer.
+                            Money is secondary before love, it shows new love,
+                            new network etc
+                          </li>
+                          <li>
+                            The Queen of hearts is the lovely mother, wife,
+                            girl-friend, signifies that wealth is on the way,
+                            new beginnings
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   )}
                 </div>
               );
             })
           )}
+          <div className="top-0 flex flex-col items-center justify-center">
+            <Link
+              href="/"
+              className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%]"
+            >
+              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-purple-500 group-hover:bg-purple-700 group-hover:skew-x-12"></span>
+              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-purple-700 group-hover:bg-purple-500 group-hover:-skew-x-12"></span>
+              <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-purple-600 -rotate-12"></span>
+              <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-purple-400 -rotate-12"></span>
+              <span className="relative text-sm">Save this pack</span>
+            </Link>
+            <Link
+              href="/"
+              className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%]"
+            >
+              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-pink-500 group-hover:bg-pink-700 group-hover:skew-x-12"></span>
+              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-pink-700 group-hover:bg-pink-500 group-hover:-skew-x-12"></span>
+              <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-pink-600 -rotate-12"></span>
+              <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-pink-400 -rotate-12"></span>
+              <span className="relative text-sm">Discard this pack</span>
+            </Link>
+            <Link
+              href="/"
+              className="relative px-5 py-2 font-medium text-white group my-1 text-center w-[60%]"
+            >
+              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-12 bg-green-500 group-hover:bg-green-700 group-hover:skew-x-12"></span>
+              <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-12 bg-green-700 group-hover:bg-green-500 group-hover:-skew-x-12"></span>
+              <span className="absolute bottom-0 left-0 hidden w-10 h-20 transition-all duration-100 ease-out transform -translate-x-8 translate-y-10 bg-green-600 -rotate-12"></span>
+              <span className="absolute bottom-0 right-0 hidden w-10 h-20 transition-all duration-100 ease-out transform translate-x-10 translate-y-8 bg-green-400 -rotate-12"></span>
+              <span className="relative text-sm">Edit notes</span>
+            </Link>
+          </div>
         </div>
       </div>
+
       <div className="w-full sm:p-4">
         <TableUsers />
-        <h2 className="p-4">All links</h2>
+        <h2 className="p-4">This is a quick history view</h2>
         <div className="rounded-md sm:border"></div>
       </div>
     </>
