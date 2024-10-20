@@ -7,7 +7,6 @@ import { nanoid } from "nanoid";
 import { ITypes } from "@/app/types/MyCard.types";
 import { TableUsers } from "@/app/components/TableUsers";
 import Link from "next/link";
-import { Player } from "@lottiefiles/react-lottie-player";
 import Lottie from "react-lottie";
 import animationData from "@/lotties/nodatas.json";
 
