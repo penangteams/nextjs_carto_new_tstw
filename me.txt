@@ -1,0 +1,54 @@
+https://www.youtube.com/watch?v=NWEukI8KsBI
+Git: https://github.com/candraKriswinarto/responsive-navbar
+A good Navbar responsive tailwindcss
+------------------
+How to mange types?
+https://stackademic.com/blog/react-typescript-folder-structure-to-follow-ae614e786f8a
+
+Uses nextjs for cartomancy project.
+ZUSTAND demo nice: https://www.youtube.com/watch?v=3xwETw0MAHQ
+
+Button collection:
+https://devdojo.com/tailwindcss/buttons?utm_source=tailkits&utm_medium=referral&utm_campaign=components
+
+Symbols used:
+https://www.toptal.com/designers/htmlarrows/symbols/black-chess-pawn/
+
+https://dev.to/aanis434/how-to-deploy-a-react-nextjs-application-with-apache2-on-ubuntu-in-aws-ec2-instance-221o
+
+React Hot Toast: custom toast options:
+https://codesandbox.io/p/sandbox/react-hot-toast-custom-toast-dismiss-re8xhs?file=%2Fsrc%2FApp.js%3A18%2C4-20%2C6
+
+1) run,
+npm run build at the VPS
+2) at the folder, pm2 start npm --name "nextjs_cartomancy" -- start -- --port=3009
+3) pm2 save
+4) allow ufw at port 3009
+
+Now apache config:
+nano nextcarto.conf
+then....*:
+
+<VirtualHost *:80>
+    ServerAdmin webmaster@yourdomain.com
+    DocumentRoot /var/www/next_ts_cartomancy
+
+ServerName nextjs.wintech.homes
+ServerAlias www.nextjs.wintech.homes
+
+# has Nuxt runs on port 3009
+    ProxyPass / http://127.0.0.1:3009/
+    ProxyPassReverse / http://127.0.0.1:3009/
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+
+</VirtualHost>
+a2ensite nextcarto.conf
+systemctl reload apache2
+
+to get SSL:
+sudo certbot -d nextjs.wintech.homes -d www.nextjs.wintech.homes
+A congrats message will come together with auto created: nextcarto-le-ssl.conf 
+
